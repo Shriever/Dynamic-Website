@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team | Dynamic Mortgage</title>
+  <!-- Link to style.css -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts (Optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" 
+    rel="stylesheet" 
+  />
+</head>
+<body>
+  <!-- HEADER (Optional) -->
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Dynamic Mortgage Logo" class="logo" />
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#" class="btn-apply">Apply Now</a></li>
+        </ul>
+        <!-- Hamburger button if you want mobile nav toggle -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+          <img src="images/icons/hamburger-icon.svg" alt="Menu" class="hamburger-icon" />
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- TEAM SECTION -->
+  <section class="team-section" style="padding: 2rem 1rem;">
+    <div class="team-container" style="max-width: 1200px; margin: 0 auto;">
+      <h1 style="text-align: center; margin-bottom: 2rem;">
+        Meet the Dynamic Mortgage Team
+      </h1>
+
+      <!-- Team Grid -->
+      <div class="team-grid" 
+           style="
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 2rem;
+           ">
+        <!-- Team Member 1: Dovie Lieberman -->
+        <div class="team-member" style="text-align: center; background: #f8f9fa; border-radius: 8px; padding: 1.5rem;">
+          <!-- Optional: Insert real or placeholder photo -->
+          <img 
+            src="images/member-dovie.jpg" 
+            alt="Dovie Lieberman" 
+            style="
+              width: 120px;
+              height: 120px;
+              object-fit: cover;
+              border-radius: 50%;
+              margin-bottom: 1rem;
+            "
+          />
+          <h2 style="margin-bottom: 0.5rem;">Dovie Lieberman</h2>
+          <p style="font-style: italic; color: #555; margin-bottom: 1rem;">
+            Founder &amp; Mortgage Advisor
+          </p>
+          <p style="color: #333;">
+            Dovie Lieberman brings extensive industry expertise and a passion 
+            for helping families secure the right mortgage. He founded Dynamic Mortgage 
+            on the principle of putting clients first and ensuring a clear, straightforward process. 
+          </p>
+        </div>
+
+        <!-- Team Member 2: Levi Lieberman -->
+        <div class="team-member" style="text-align: center; background: #f8f9fa; border-radius: 8px; padding: 1.5rem;">
+          <img 
+            src="images/member-levi.jpg" 
+            alt="Levi Lieberman" 
+            style="
+              width: 120px;
+              height: 120px;
+              object-fit: cover;
+              border-radius: 50%;
+              margin-bottom: 1rem;
+            "
+          />
+          <h2 style="margin-bottom: 0.5rem;">Levi Lieberman</h2>
+          <p style="font-style: italic; color: #555; margin-bottom: 1rem;">
+            Head of Operations
+          </p>
+          <p style="color: #333;">
+            Levi Lieberman ensures the smooth day-to-day functioning of Dynamic Mortgage. 
+            From overseeing loan processing to streamlining customer experiences, Levi's 
+            commitment keeps everything running efficiently.
+          </p>
+        </div>
+
+        <!-- Team Member 3: Chana Lieberman -->
+        <div class="team-member" style="text-align: center; background: #f8f9fa; border-radius: 8px; padding: 1.5rem;">
+          <img 
+            src="images/member-chana.jpg" 
+            alt="Chana Lieberman" 
+            style="
+              width: 120px;
+              height: 120px;
+              object-fit: cover;
+              border-radius: 50%;
+              margin-bottom: 1rem;
+            "
+          />
+          <h2 style="margin-bottom: 0.5rem;">Chana Lieberman</h2>
+          <p style="font-style: italic; color: #555; margin-bottom: 1rem;">
+            Client Relations Manager
+          </p>
+          <p style="color: #333;">
+            Chana Lieberman focuses on building long-lasting relationships with our clients. 
+            Her friendly approach and in-depth knowledge of mortgage products ensure clients 
+            get personalized attention at every stage.
+          </p>
+        </div>
+
+        <!-- Team Member 4: Jared Goldfarb -->
+        <div class="team-member" style="text-align: center; background: #f8f9fa; border-radius: 8px; padding: 1.5rem;">
+          <img 
+            src="images/member-jared.jpg" 
+            alt="Jared Goldfarb" 
+            style="
+              width: 120px;
+              height: 120px;
+              object-fit: cover;
+              border-radius: 50%;
+              margin-bottom: 1rem;
+            "
+          />
+          <h2 style="margin-bottom: 0.5rem;">Jared Goldfarb</h2>
+          <p style="font-style: italic; color: #555; margin-bottom: 1rem;">
+            Senior Loan Officer
+          </p>
+          <p style="color: #333;">
+            Jared Goldfarb is our seasoned loan officer who guides clients through the 
+            intricacies of mortgage financing. With a detail-oriented mindset, Jared’s goal 
+            is to find the best possible loan solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-container">
+      <!-- Left area (or full-width on mobile) -->
+      <div class="footer-left">
+        <p>&copy; 2024 Dynamic Mortgage. All Rights Reserved.</p>
+        <p>
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="#">Terms &amp; Conditions</a>
+        </p>
+      </div>
+  
+      <!-- Right area (social icons) -->
+      <div class="footer-right">
+        <div class="footer-social">
+          <!-- Example uses external SVG or PNG icons. Update file paths as needed. -->
+          <a target="_blank" href="https://www.facebook.com/DynamicMortgage" aria-label="Facebook">
+            <img src="images/icons/facebook.svg" alt="Facebook" />
+          </a>
+          <a target="_blank" href="https://x.com/DynamicMortgage" aria-label="Twitter">
+            <img src="images/icons/twitter.svg" alt="X/Twitter" />
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/company/dynamic-mortgage/" aria-label="LinkedIn">
+            <img src="images/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a target="_blank" href="https://www.instagram.com/dynamic.mortgage/" aria-label="Instagram">
+            <img src="images/icons/instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toggle Script (if you're using the mobile hamburger menu) -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburgerBtn && navLinks) {
+      hamburgerBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    }
+  });
+  </script>
+</body>
+</html>

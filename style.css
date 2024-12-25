@@ -1,0 +1,410 @@
+/* Base / Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 
+     FOCUS STYLES (Important for ADA/Accessibility)
+     We do NOT remove outlines. Instead, we enhance them so they are clearly visible.
+  */
+  :focus {
+    outline: 3px solid #ffbf47; /* Adjust color if you prefer */
+    outline-offset: 2px;
+  }
+  
+  /* Make skip links visible on focus */
+  .skip-to-content {
+    position: absolute; 
+    left: -9999px; 
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .skip-to-content:focus {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    background: #fff;
+    color: #000;
+    padding: 0.5rem;
+    z-index: 9999;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  /* Body */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /*************************************************************
+   * HEADER / NAVBAR
+   *************************************************************/
+  .site-header {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative; 
+    z-index: 999; /* or higher if needed */
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Main Nav (Desktop) */
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Hamburger button and icon */
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Show only on mobile via media query */
+    margin-left: 1rem;
+    padding: 0; /* Remove default button padding */
+  }
+  .hamburger-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Navigation links (desktop) */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: #007bff;
+  }
+  
+  /* Apply Now button in the nav */
+  .btn-apply {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .btn-apply:hover,
+  .btn-apply:focus {
+    background: #0056b3;
+  }
+  
+  /*************************************************************
+   * HERO SECTION
+   *************************************************************/
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Adjust as needed */
+    min-height: 500px; 
+    background: url("images/hero.jpg") center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4); /* Dark overlay */
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #007bff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .cta-button:hover,
+  .cta-button:focus {
+    background: #0056b3;
+  }
+  
+  /* ABOUT SECTION */
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3rem 1rem;
+    background: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .about-text {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 2rem;
+  }
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  .about-text p {
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .about-image {
+    flex: 1;
+    text-align: center;
+  }
+  .about-image img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+  
+  /* SERVICES SECTION */
+  .services-section {
+    background: #f8f9fa;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  .services-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #222;
+  }
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .service-card {
+    background: #fff;
+    border-radius: 4px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  .service-card img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+  .service-card p {
+    color: #555;
+  }
+  
+  /* TESTIMONIALS / INFO SECTION */
+  .testimonials-section {
+    background: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  .testimonial-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .testimonial-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  .testimonial-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* CTA / CONTACT SECTION */
+  .cta-section {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  .cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .cta-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .cta-section .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #007bff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .cta-section .cta-button:hover,
+  .cta-section .cta-button:focus {
+    background: #f1f1f1;
+  }
+  
+  /* FOOTER */
+  .site-footer {
+    background: #2d2d2d; /* Dark gray */
+    color: #ccc;         /* Lighter text color */
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* Left side (text) styling */
+  .footer-left p {
+    margin: 0.3rem 0;
+  }
+  .footer-left a {
+    color: #ccc;
+    text-decoration: underline;
+  }
+  .footer-left a:hover,
+  .footer-left a:focus {
+    color: #fff;
+  }
+  /* Right side (social icons) */
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
+  .footer-social a {
+    margin-left: 1rem;  /* Spacing between icons */
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .footer-social a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain; /* Ensures correct aspect ratio */
+  }
+  
+  /* MEDIA QUERIES / RESPONSIVENESS */
+  @media (max-width: 768px) {
+    /* 
+       Show hamburger on small screens,
+       hide nav-links by default
+    */
+    .hamburger {
+      display: block;
+    }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px; /* just below the header */
+      right: 0;
+      width: 200px;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .nav-links li {
+      margin: 1rem 0;
+    }
+    .nav-links.show {
+      display: flex; /* toggled via JS */
+    }
+    .btn-apply {
+      margin-top: 1rem;
+    }
+  
+    /* Hero text sizing for mobile */
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    .hero-content p {
+      font-size: 1rem;
+    }
+  
+    /* About section on mobile */
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .about-text,
+    .about-image {
+      margin-right: 0;
+      max-width: 100%;
+    }
+  
+    /* Footer on mobile */
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer-right {
+      margin-top: 1rem;
+    }
+    .footer-social a {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem; /* optional symmetrical spacing */
+    }
+  }
+  
