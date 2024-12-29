@@ -246,21 +246,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript (Hamburger Menu Toggle) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburgerBtn = document.getElementById('hamburger-btn');
-      const navLinks = document.getElementById('nav-links');
-
-      if (hamburgerBtn && navLinks) {
-        hamburgerBtn.addEventListener('click', () => {
-          navLinks.classList.toggle('show');
-          // Toggle aria-expanded
-          const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-          hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
-        });
-      }
-    });
-  </script>
+  <script src="addFooter.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

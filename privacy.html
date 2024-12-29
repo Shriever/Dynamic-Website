@@ -221,22 +221,7 @@
     </div>
   </footer>
 
-  <!-- Toggle Script (if you're using the mobile hamburger menu) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburgerBtn = document.getElementById('hamburger-btn');
-      const navLinks = document.getElementById('nav-links');
-      
-      if (hamburgerBtn && navLinks) {
-        hamburgerBtn.addEventListener('click', () => {
-          // Toggle the .show class
-          navLinks.classList.toggle('show');
-          // Toggle aria-expanded
-          const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
-          hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
-        });
-      }
-    });
-  </script>
+  <script src="script.js"></script>
+  <script src="addFooter.js"></script>
 </body>
 </html>

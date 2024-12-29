@@ -408,3 +408,9 @@
     }
   }
   
+  .nmls {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+    font-weight: 500;
+  }
