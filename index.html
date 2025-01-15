@@ -171,7 +171,7 @@
         Our dedicated team is here to guide you. Let’s unlock your 
         homeownership dreams and secure your financial future.
       </p>
-      <a 
+      <!-- <a 
         href="https://1797180.my1003app.com/1765027/register" 
         class="cta-button" 
         target="_blank"
@@ -179,7 +179,63 @@
         aria-label="Apply now on a separate website"
       >
         Apply Now
-      </a>
+      </a> -->
+      <div class="lead-form-container">
+        <img class="form-logo" src="./images/logo.png" alt="">
+        
+        <form action="#" method="POST">
+          <!-- Name and Phone in one row -->
+          <div class="form-row">
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Name"
+                required
+              />
+            </div>
+    
+            <!-- Phone Number Field -->
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input 
+                type="tel"
+                id="phone" 
+                name="phone" 
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+          </div>
+    
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="Email"
+              required
+            />
+          </div>
+    
+          <!-- Consent Text -->
+          <p class="consent-text">
+            I agree to be contacted by Dynamic Mortgage LLC via call, email and text. 
+            To opt out, you can reply "stop" at any time or click the unsubscribe link in the emails. 
+            Message and data rates may apply. Messages frequency varies. 
+            <a href="/privacy.html" target="_blank">Privacy Policy</a> &amp; 
+            <a href="/terms.html" target="_blank">Terms of Service</a>.
+          </p>
+    
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">Contact Us</button>
+        </form>
+      </div>
     </section>
   </main>
 

@@ -415,4 +415,152 @@
     font-weight: 500;
   }
 
-  
+  /* 
+      ---------------------------------------------------------
+      LEAD FORM CONTAINER (SCOPED STYLES)
+      ---------------------------------------------------------
+    */
+    .lead-form-container {
+      /* Container appearance */
+      background-color: #fff;
+      border: 1px solid #ccc;          /* Subtle border */
+      border-radius: 6px;
+      max-width: 600px;               /* Matches the approximate width in your reference */
+      width: 100%;
+      margin: 2rem auto;              /* Centers on the page */
+      padding: 2rem;                  /* Extra padding for a more spacious look */
+      font-family: Arial, sans-serif; /* Simple, clean font */
+      color: #333;                    /* Main text color */
+    }
+
+    /*
+      ---------------------------------------------------------
+      TITLE STYLES
+      ---------------------------------------------------------
+    */
+    .lead-form-container .form-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 2rem; 
+      text-align: center;
+    }
+
+    /*
+      ---------------------------------------------------------
+      FORM LAYOUT
+      ---------------------------------------------------------
+    */
+    /* 
+      We'll use a row (flex) for Name and Phone Number side by side,
+      and then a single row for Email below.
+    */
+    .lead-form-container .form-row {
+      display: flex;
+      justify-content: space-between; /* Keeps labels/inputs spaced out */
+      gap: 1.5rem;                   /* Horizontal gap between columns */
+      margin-bottom: 1.5rem;
+    }
+
+    .lead-form-container .form-row .form-group {
+      flex: 1;                       /* Each column will expand evenly */
+      margin-bottom: 0;              /* Avoid extra bottom spacing in a row */
+    }
+
+    /* 
+      Single-column form-group (like for Email).
+      We'll keep the default margin for vertical spacing.
+    */
+    .lead-form-container .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .lead-form-container .form-group label {
+      display: block;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+
+    .lead-form-container .form-group input {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.9rem 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      color: #333;
+      transition: border-color 0.2s;
+    }
+
+    .lead-form-container .form-group input::placeholder {
+      color: #999; /* Lighter placeholder color */
+    }
+
+    .lead-form-container .form-group input:focus {
+      outline: none;
+      border-color: #4a90e2; /* Highlight color */
+    }
+    .form-logo {
+      width: 350px;
+      height: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    /*
+      ---------------------------------------------------------
+      CONSENT TEXT
+      ---------------------------------------------------------
+    */
+    .lead-form-container .consent-text {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;   /* Space before button */
+      color: #333;
+    }
+
+    .lead-form-container .consent-text a {
+      color: #4a90e2;        /* Match the button color or a similar shade of blue */
+      text-decoration: none;
+    }
+
+    .lead-form-container .consent-text a:hover {
+      text-decoration: underline;
+    }
+
+    /*
+      ---------------------------------------------------------
+      SUBMIT BUTTON
+      ---------------------------------------------------------
+    */
+    .lead-form-container .submit-btn {
+      display: inline-block;
+      width: 100%;
+      background-color: #4a90e2;
+      color: #fff;
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .lead-form-container .submit-btn:hover {
+      background-color: #3a78b8; /* Slightly darker on hover */
+    }
+
+    /*
+      ---------------------------------------------------------
+      RESPONSIVE ADJUSTMENTS
+      ---------------------------------------------------------
+    */
+    @media (max-width: 600px) {
+      .lead-form-container .form-row {
+        flex-direction: column;
+        gap: 0; /* Remove horizontal gap when stacking */
+      }
+      .lead-form-container .form-row .form-group {
+        margin-bottom: 1.5rem;
+      }
+    }
